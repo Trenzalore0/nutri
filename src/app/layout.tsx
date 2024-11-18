@@ -25,6 +25,11 @@ export default function RootLayout({
           <Header />
         </div>
         {children}
+        <div>
+          <footer>
+            <div className='text-center'>Made with love by Trenzalore.</div>
+          </footer>
+        </div>
       </body>
     </html>
   );
