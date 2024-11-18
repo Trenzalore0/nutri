@@ -2,6 +2,11 @@
 import Link from 'next/link';
 import localFont from 'next/font/local';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contato '
+}
 
 const contactLinks = [
   { name: 'Whatsapp', href: 'https://api.whatsapp.com/message/WPT3NM525OOHB1?autoload=1&app_absent=0' },
