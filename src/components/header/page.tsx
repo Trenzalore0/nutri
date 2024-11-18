@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { name: 'Pagina Inicial', href: '/' },
@@ -11,7 +11,7 @@ const navLinks = [
 ]
 
 export default function Header() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   return (
     <header className='flex mb-2 bg-[#e3e3e3]'>
       <Link href='/' className=''>
@@ -27,7 +27,7 @@ export default function Header() {
       <div className='flex justify-center items-center w-full '>
         <div className='flex flex-wrap items-center'>
           {navLinks.map(navLink => {
-            const active = navLink.href === pathname.toString();
+            // const active = navLink.href === pathname.toString();
             return (
               <Link
                 href={navLink.href}
