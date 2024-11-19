@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-// import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Sobre mim'
@@ -17,11 +16,6 @@ const list = [
 export default function About() {
   return (
     <>
-
-      <div>
-        #Image
-      </div>
-
       <h1 className='text-center font-bold text-4xl text-[#061e41]'>
         Viviane Monteiro Ferreira
       </h1>

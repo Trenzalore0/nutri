@@ -8,13 +8,8 @@ export const metadata: Metadata = {
   title: 'Contato '
 }
 
-const contactLinks = [
-  { name: 'Whatsapp', href: 'https://api.whatsapp.com/message/WPT3NM525OOHB1?autoload=1&app_absent=0' },
-  { name: 'Instagram', href: 'https://www.instagram.com/nutri.vivianemonteiro/' }
-];
-
 const font = localFont({
-  src: '../fonts/BrittanySignature/BrittanySignature.ttf',
+  src: '../../fonts/BrittanySignature/BrittanySignature.ttf',
   weight: "100 900",
 });
 
@@ -34,16 +29,7 @@ export default function Contact() {
   return (
     <div className='flex justify-center'>
       <div>
-        <div className='flex justify-center mb-2'>
-          <Image
-            src='/profile.jpg'
-            alt='Profile Picture'
-            width={200}
-            height={200}
-            loading='lazy'
-            className='border-2 border-[#061e41] rounded-full p-2'
-          />
-        </div>
+
         <h1 className={`${font.className} text-4xl text-center font-bold text-[#061e41] mb-2`}>
           Viviane Monteiro
         </h1>
@@ -86,20 +72,39 @@ export default function Contact() {
 
           Venha fazer parte do time!
         </div>
-        <div className='flex flex-col mt-4'>
+        <div className='flex flex-col mt-2'>
 
-          {contactLinks.map(contactLink => {
-            return (
-              <Link
-                href={contactLink.href}
-                key={contactLink.name}
-                className='p-2 m-2 border border-[#061e41] rounded hover:underline text-center'
-                target='_blank'
-              >
-                {contactLink.name}
-              </Link>
-            );
-          })}
+          <Link
+            href='https://api.whatsapp.com/message/WPT3NM525OOHB1?autoload=1&app_absent=0'
+            className='p-2 m-2 border border-[#061e41] text-white rounded hover:underline text-center flex bg-[#34d951]'
+            target='_blank'
+          >
+            <Image
+              src='/whatsapp.png'
+              alt='whatsapp logo'
+              width={24}
+              height={24}
+            />
+            <span className='text-center font-semibold w-full'>
+              Whatsapp
+            </span>
+          </Link>
+
+          <Link
+            href='https://www.instagram.com/nutri.vivianemonteiro/'
+            className='p-2 m-2 border border-[#061e41] text-white rounded hover:underline text-center flex bg-instagram-gradient '
+            target='_blank'
+          >
+            <Image
+              src='/instagram.png'
+              alt='instagram logo'
+              width={24}
+              height={24}
+            />
+            <span className='text-center font-semibold w-full'>
+              Instagram
+            </span>
+          </Link>
 
         </div>
       </div>
