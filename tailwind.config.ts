@@ -14,5 +14,10 @@ export default {
       },
     },
   },
+  safelist: [
+    {
+      pattern: /list-image-\[url\(.*\)\]/,
+    },
+  ],
   plugins: [],
 } satisfies Config;

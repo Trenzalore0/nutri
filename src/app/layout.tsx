@@ -24,7 +24,11 @@ export default function RootLayout({
         <div>
           <Header />
         </div>
-        {children}
+        <div className='flex justify-center flex-col items-center'>
+          <div className='max-w-4xl'>
+            {children}
+          </div>
+        </div>
         <div>
           <footer>
             <div className='text-center'>Made with love by Trenzalore.</div>

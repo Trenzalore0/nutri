@@ -1,4 +1,4 @@
-
+import React from 'react';
 import Link from 'next/link';
 import localFont from 'next/font/local';
 import Image from 'next/image';
@@ -18,6 +18,18 @@ const font = localFont({
   weight: "100 900",
 });
 
+const paymentList = [
+  { index: 0, item: 'PIX' },
+  { index: 1, item: 'Dinheiro' },
+  { index: 2, item: 'Cartão' }
+];
+
+const citiesList = [
+  { index: 0, item: 'Venturosa' },
+  { index: 1, item: 'Arcoverde' },
+  { index: 2, item: 'Pedra' }
+];
+
 export default function Contact() {
   return (
     <div className='flex justify-center'>
@@ -36,32 +48,40 @@ export default function Contact() {
           Viviane Monteiro
         </h1>
         <div>
-          <h2>
+          <h2 className='text-center font-semibold'>
             Formas de pagamento
           </h2>
 
-          <ol>
-            <li>PIX</li>
-            <li>Dinheiro</li>
-            <li>Cartão</li>
+          <ol className='list-disc pl-6'>
+            {
+              paymentList.map(payment => {
+                return (
+                  <li key={payment.index}>
+                    {payment.item}
+                  </li>
+                );
+              })
+            }
           </ol>
 
         </div>
         <div>
-          <h2>
+          <h2 className='text-center font-semibold'>
             ATENDIMENTO ONLINE E PRESENCIAL:
           </h2>
 
-          <ol>
-            <li>
-              Venturosa
-            </li>
-            <li>
-              Arcoverde
-            </li>
-            <li>
-              Pedra
-            </li>
+          <ol className="list-image-[url('/location-pin.png')] pl-6" >
+            {
+              citiesList.map(city => {
+                return (
+                  <li
+                    key={city.index}
+                  >
+                    {city.item}
+                  </li>
+                );
+              })
+            }
           </ol>
 
           Venha fazer parte do time!
